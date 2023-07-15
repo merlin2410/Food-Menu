@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0px 5px;
+    height: 720px;
+    
+}
+
+.side-container{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    
+    
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;  
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img{
+    width: 80%;
+}
+
+.quick-links, .about-us{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+}
+
+.list-quick-links, .list-about-us{
+    padding: 0px 20px;
+    margin: 0px 20px;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0px 5px;
+    
+    
+}
+
+/* Navigation Bar */
+.nav-bar{
+    display: flex;
+    position: sticky;
+    top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    margin: 0px 10px;
+    z-index: 1000;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    background-color: #272a30;
+    width: 45%;
+    height: 100%;
+    gap: 5px;
+    border-radius: 5px;
+}
+
+.search-field{
+    width: 90%;
+    height: 90%;
+    background-color: #272a30;
+    outline: none;
+    border: none;
+}
+
+.search-icon{
+    background-color: #272a30;
+    margin: 7px;
+}
+
+.logo-search-bar{
+    width: 5%;
+}
+
+.logo-search-bar img{
+    width: 60%;
+}
+
+.signup, .login {
+    background-color: red;
+    width: 20%;
+    border-radius: 5px;
+    height: 90%;
+}
+
+.content-section{
+    position: relative;
+    top: 60px;
+    width: 100%;
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner{
+    width: 100%;
+    height: 300px;
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-items{
+    display: flex;
+    gap: 15px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 32%;
+    border-radius: 5px;
+    background-color: #272a30;
+    padding: 8px;
+}
+
+.item img{
+    border-radius: 5px;
+}
+
+
+.item-subtitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #272a30;
+}
+
+.item-details, .add, .item-details h5, .item-details p{
+    background-color: #272a30;
+}
