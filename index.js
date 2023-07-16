@@ -5,38 +5,48 @@ async function getMenu(){
     return foodItems;
 }
 
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function takeOrder(foodItems){
+    console.log("Taking Orders...");
+    await delay(2500);
     orders = [];
-    console.log("Taking Order....")
-    setTimeout(()=>{
-        for(i=0;i<3;i++){
-            randomIndex = Math.floor(Math.random()*foodItems.length);
-            orders.push(foodItems[randomIndex]);
-        }
-        //console.log(orders);
-        
-    },2500);
+    
+    for(i=0;i<3;i++){
+        randomIndex = Math.floor(Math.random()*foodItems.length);
+        orders.push(foodItems[randomIndex]);
+    }
+
+    console.log("Orders successfully taken",orders);
 
     return orders;
     
 }
 
 async function orderPrep(orderStatus){
-    orderStatus = {};
-    setTimeout(()=>{
-        orderStatus.order_status = true;
-    },1500);
+    console.log("Preparing Order...");
+    await delay(1500);
+    orderStatus.order_status = true;
+    console.log("Preparing Order: Done")
+    console.log(orderStatus);
+    return orderStatus;
 }
 
 async function payOrder(orderStatus){
-    setTimeout(()=>{
-        orderStatus.paid = true;
-    },1000);
+    console.log("Payment Processing");
+    await delay(1000);
+    orderStatus.paid = true;
+    console.log("Payment Processing Done")
+    console.log(orderStatus)
+    return orderStatus;
 }
 
-function thankyouFnc(){
+function thankyouFnc(orderStatus){
+    
     if(orderStatus.paid===true){
-        alert("Thank you for eating with us today!")
+        alert("Thank you for eating with us today!");
     }
 }
 
@@ -67,23 +77,26 @@ function renderMenu(foodItems){
 
 
 async function orderFood(){
+    
     orderStatus = {
         order_status: false,
         paid: false
     }
-
     foodItems = await getMenu();
 
     orders = await takeOrder(foodItems);
-    console.log(orders);
+    
 
     await orderPrep(orderStatus);
-    console.log(orderStatus);
-
+    
     await payOrder(orderStatus);
-    console.log(orderStatus);
+    
+
+
+    
 
     thankyouFnc(orderStatus);
+    
 
 }
 

@@ -163,6 +163,11 @@
     display: flex;
     gap: 15px;
     overflow-x: auto;
+    
+}
+
+.menu-items::-webkit-scrollbar{
+    display: none;
 }
 
 .item{

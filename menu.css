@@ -1,4 +1,4 @@
 #menu-items{
     flex-wrap: wrap;
-    
+    overflow: auto;
 }
