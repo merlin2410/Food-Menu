@@ -105,6 +105,9 @@
     margin: 7px;
 }
 
+.search-icon:hover{
+    cursor: pointer;
+}
 .logo-search-bar{
     width: 5%;
 }
@@ -113,11 +116,21 @@
     width: 60%;
 }
 
+.logo-search-bar:hover{
+    cursor: pointer;
+}
+
 .signup, .login {
     background-color: red;
     width: 20%;
     border-radius: 5px;
     height: 90%;
+}
+
+.signup:hover, .login:hover{
+    cursor: pointer;
+    background-color: white;
+    color: red;
 }
 
 .content-section{
@@ -178,6 +191,16 @@
     border-radius: 5px;
     background-color: #272a30;
     padding: 8px;
+}
+
+.item:hover{
+    border: solid 1px grey;
+}
+
+.item .add:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }
 
 .item img{
