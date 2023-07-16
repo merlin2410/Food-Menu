@@ -62,6 +62,10 @@
     margin: 0px 20px;
 }
 
+.list-quick-links a, .list-about-us a{
+    text-decoration: none;
+}
+
 .container{
     max-width: 1000px;
     margin: 0px 5px;
